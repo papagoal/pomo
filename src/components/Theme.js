@@ -6,16 +6,15 @@ export const Outer = ({children}) => {
     return (
         <div
             className={css({
-                marginTop: '20vh',
-                width: '100%',
-                height: '100%'
+                background: theme.colors.accent100,
+                height: '95vh'
             })}
         >
             {children}
         </div>
     );
 };
-export const Inner = ({children}) => {
+export const Inner = ({children, h='80vh'}) => {
     const [css, theme] = useStyletron();
     return (
         <div
@@ -26,7 +25,7 @@ export const Inner = ({children}) => {
                 background: theme.colors.accent200,
                 color: theme.colors.accent700,
                 padding: '.25rem',
-                height: '100px',
+                height: h
             })}
         >
             {children}

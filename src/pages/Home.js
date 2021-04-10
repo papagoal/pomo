@@ -1,23 +1,22 @@
-import React from 'react';
-import {Outer, Inner} from "../components/Theme";
+import * as React from 'react';
 import {Grid, Cell} from 'baseui/layout-grid';
+import {Outer, Inner} from "../components/Theme";
 
-const Home = () => {
+export default function Example() {
     return (
-        <Outer>
-            <Grid>
-                <Cell span={[1, 2, 4]}>
-                    <Inner>1</Inner>
-                </Cell>
-                <Cell span={[2, 4, 4]}>
-                    <Inner>2</Inner>
-                </Cell>
-                <Cell span={[1, 2, 4]}>
-                    <Inner>3</Inner>
-                </Cell>
-            </Grid>
-        </Outer>
-    );
-};
+        <Grid
+            gridGaps={12}
+        >
+            <Cell skip={1} span={[4, 8, 12]}>
+                <Inner h={'5vh'}>1</Inner>
+            </Cell>
+            <Cell skip={1} span={[4, 8, 12]}>
+                <Inner>1</Inner>
+            </Cell>
+            <Cell skip={1} span={[4, 8, 12]}>
+                <Inner h={'5vh'}>1</Inner>
+            </Cell>
+        </Grid>
 
-export default Home;
+    );
+}
